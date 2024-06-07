@@ -1,0 +1,438 @@
+*{
+    
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'crimson text',sans-serif;
+}
+@font-face{
+    font-family: 'crimson text';
+    src: url(assets/fonts/CrimsonText-Regular.ttf);
+}
+@font-face{
+    font-family: 'crimson bold';
+    src: url(assets/fonts/CrimsonText-Bold.ttf);
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url(./assets/fonts/Merriweather-Regular.ttf);
+}
+
+:root{
+    --primary-color: #FF5733;
+    --secondary-color:rgb(228, 224, 224);
+}
+.padding{
+    padding: 0px 30px;
+}
+h1{
+    color: var(--primary-color);
+    font-family: 'crimson bold';
+}
+/* start of navbar */
+.navbar .logo img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+.navbar-nav .nav-item {
+    padding-right: 15px; 
+}
+.navbar-toggler{
+    border: none;
+}
+/* .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+} */
+
+/* If you want to add a background color when the navbar is sticky */
+/* .header.sticky {
+    background: transparent;
+    box-shadow: 0 2px 1px rgba(201, 155, 155, 0.1); 
+} */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    /* color: var(--primary-color) !important; */
+    text-decoration: 2px underline var(--primary-color);
+}
+.navbar{
+    background-color: white !important;
+}
+.navigation ul li a{
+    border-radius: 15px;
+    text-align: center;
+
+}
+/* end of navbar */
+
+/* start of banner */
+.banner{
+    padding: 6% 0 5% 0;
+}
+.banner .left-wrapper{
+    width: 50%;
+}
+.banner h1{
+    color: rgb(12, 12, 12);
+}
+.banner .location i{
+    color: var(--primary-color);
+}
+.banner .right-wrapper{
+    width: 70%;
+    text-align: center;
+}
+.banner .left-wrapper .heading{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.banner .left-wrapper .heading span{
+    font-size: larger;
+    font-family: 'crimson bold';
+    color: var(--primary-color);
+}
+.banner .left-wrapper .btn-wrapper a{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    letter-spacing: 0.02cm;
+}
+.banner .left-wrapper .btn-wrapper a:hover{
+    color: black;
+    transition: .3s;
+    text-decoration: none;
+
+}
+.banner .left-wrapper .btn-wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.banner .right-wrapper .image-wrapper img{
+    width: 100%;
+}
+.banner .list-banner a i {
+    font-size: 30px;
+    padding: 15px 0px;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.banner .list-banner a:hover i {
+    color: black;
+}
+.type{
+    color: gray;
+    width: 0; 
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--primary-color);
+    animation: typing 3s steps(20,end) forwards;
+}
+@keyframes typing{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navbarNav{
+        background-color: var(--secondary-color);
+        text-align: center;
+    }
+    .header{
+        padding: 0;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .banner .left-wrapper{
+        text-align: center;
+        width: 100%;
+    }
+    .banner .list-banner{
+        display: inline;
+        justify-content: center;
+    }
+    .banner .left-wrapper .heading{
+        display: inline;
+        justify-content: center;
+    }
+    .banner .left-wrapper .btn-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .banner .left-wrapper .btn-wrapper a {
+        padding: 5px;
+        font-size: small;
+    }
+}
+/* end of banner */
+/* start of about */
+.about{
+    padding: 10% 0;
+    background-color: var(--secondary-color);
+}
+.aboutme-img img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.row .about-para span{
+    color: var(--primary-color);
+}
+.about .about-para p{
+    margin-bottom: 0px;
+}
+@media screen and (max-width: 600px) {
+    
+    .about-heading{
+        text-align: center;
+    }
+    .row .aboutme-img img{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10%;
+    }
+    .row .about-para{
+        text-align: center;
+
+    }
+
+    .about .row{
+        padding: 0px;
+    }
+}
+
+.row .card {
+    padding-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.row .card:hover,
+.row .card.selected{
+    transform: translateY(-10px);
+    transition: .3s;
+}
+.card-img-top {
+    height: 200px; 
+    object-fit: contain; 
+}
+.row .card .card-body p{
+    text-align: center;
+}
+/* end of about */
+/* start of skill  */
+.skills{
+    padding: 8% 0;
+}
+.skills h1{
+    padding-top: 30px;
+}
+@media screen and (max-width: 600px){
+    .skills .card-img-top{
+       height: 50px;
+    }
+}
+/* end of skill */
+
+/* start of education/experiences */
+.education{
+    background-color: var(--secondary-color);
+    padding-top: 5%;
+}
+
+.education .contents h4{
+    font-family: 'crimson bold';
+}
+.education p{
+    margin-bottom: 0;
+}
+.education .contents .box{
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    border-left: 2px solid var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+.education .contents .box:hover{
+    box-shadow: 0px 3px 10px 0px black;
+    border: 3px solid transparent;
+}
+.education .heading h1{
+   
+    padding-left: 22px;
+}
+.education .row{
+    padding-bottom: 10%;
+}
+
+@media screen and (max-width:600px) {
+    .education .heading{
+        text-align: center;
+
+    }
+
+}
+/* end of edu / exp  */
+
+/* start of projects */
+.projects h1{
+    padding: 30px;
+    text-align: center;
+}
+.projects .card-title{
+    font-weight: bold;
+}
+.projects .card-body{
+    text-align: center;
+    cursor: pointer;
+}
+  .projects .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+  }
+  
+      
+  
+  
+ /* end of project   */
+  
+
+/* start of contact  */
+.contact .container {
+    padding: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.contact{
+    padding: 10% 0;
+}
+ .contact .container-fluid{
+    width: 70%;
+    
+ }
+.contact .contact-main{
+    transition: box-shadow 0.3s ease;
+        padding: 10px;
+        border-radius: 10px;
+    }
+.contact .contact-main:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.contact-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact .row .r1{
+    display: flex;
+    gap: 20px;
+}
+.contact .row .btn-contact{
+    display: flex;
+    justify-content: center;
+}
+.contact .row .btn{
+    background-color: var(--primary-color);
+    border: transparent;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    letter-spacing: 0.02cm;
+}
+.contact .row .btn:hover{
+    color: black;
+    transition: .3s;
+}
+    
+/* end of contact  */
+
+/* start of footer  */
+.footer {
+    padding-top: 30px ;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+.footer .list-footer a i {
+    font-size: 30px;
+    padding-bottom: 10px;
+    color: black;
+    transition: color 0.3s;
+}
+.footer .footer-heading{
+    font-family: 'crimson bold';
+}
+.footer .list-footer a:hover i {
+    color: var(--primary-color);
+}
+.list-footer {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.footer .card-footer {
+    border-top: 1px solid white;
+}
+.footer-body .map iframe{
+    border-radius: 15px;
+}
+
+.wrapper .icon{
+    padding-top: 5px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    display: inline-block;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+  }
+/* end of footer  */
+/* scroll  */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color:white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: black;
+    transition: .3s;
+}
